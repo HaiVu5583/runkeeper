@@ -1,4 +1,5 @@
-const fs = require('fs')
+// const fs = require('fs')
+import fs from 'fs'
 // Ignore two first argument node and filename
 const rootDir = process.argv[2]
 const years = [2013, 2014, 2015, 2016, 2017]
@@ -7,6 +8,7 @@ console.log('rootDir', rootDir)
 fs.readdir(rootDir, (err, files)=>{
     if (err){
         console.log('Err', err)
+        console.log('Done!')
         return
     }
     years.forEach(year=>{
@@ -23,4 +25,5 @@ fs.readdir(rootDir, (err, files)=>{
             }
         })
     })
+    console.log('Done!')
 })
